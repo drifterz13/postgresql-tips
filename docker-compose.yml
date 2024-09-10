@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres:latest
+    restart: always
+    # set shared memory limit when using docker-compose
+    shm_size: 256mb
+    environment:
+      POSTGRES_USER: drifterz13
+      POSTGRES_PASSWORD: pass 
+      POSTGRES_DB: mydb 
+    ports:
+      - "5555:5432"
+
